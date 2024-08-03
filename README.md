@@ -186,7 +186,48 @@ Structures are added to the design to enable testing and fault diagnosis.
 
 11) GDSII Output:
 
-The final design is converted into a GDSII file, which is the standard format for manufacturing data.
+The final design is converted into a GDSII file, which is the standard format for manufacturing data
+
+## Get familiar to open-source EDA tools
+
+# OpenLANE Directory structure in detail
+
+OpenLANE: Streamlining Your Design Journey
+
+OpenLANE leverages a collection of open-source Electronic Design Automation (EDA) tools. Its primary purpose is to automate the entire process of transforming your Register Transfer Level (RTL) code into a GDSII file, ready for chip manufacturing.
+
+Navigating Your Design Workflow:
+
+Here's a step-by-step guide using Linux commands to navigate your OpenLANE project:
+
+Locate Your Tools:
+
+Begin by opening a terminal and navigate to your tools directory using the command cd Desktop/work/tools.
+Access Your Working Directory:
+
+Next, move to your specific OpenLANE project directory with cd openlane_working_dir.
+Explore the PDK (Process Design Kit):
+
+To delve into the Sky130A process details, enter cd pdks/sky130A/. This directory contains information about the chip fabrication process.
+View PDK Files:
+
+To see a list of files related to Sky130A (ordered by date with the newest at the top), use ls -ltr.
+Locate Reference Library Files:
+
+Access the directory containing reference library files specific to the chosen process with cd libs.ref.
+Review Reference Library Files:
+
+Utilize ls -ltr again to view the files within the libs.ref directory.
+Explore Tool-Specific Library Files:
+
+Navigate back one level using cd .. and then move to the libs.tech directory containing files specific to the OpenLANE tools themselves.
+Check Tool-Specific Library Files:
+
+Finally, use ls -ltr one last time to list the files in the libs.tech directory.
+
+
+
+
 
 
 
