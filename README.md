@@ -327,6 +327,9 @@ The provided commands focus on navigating through the results of a design run an
    * `less merged.lef`: Opens the `merged.lef` file using the `less` command to view its contents. This file often combines layout information from different sources.
 
 ## Analyzing Synthesis Results
+![image](https://github.com/user-attachments/assets/a8c41da5-2e1d-43aa-ba4e-5c1c0e570eb2)
+
+Flop Ratio = Number of flops / Number of cells = 1613/14876 = 0.108 = 10.8%
 
 1. **Navigating to the Results Directory:**
    * `cd results`: Moves to the directory containing the overall results of the design project.
