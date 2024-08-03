@@ -241,6 +241,11 @@ Viewing Library Files:
     * Enter `cd libs.tech` to move to the directory containing files specific to the OpenLANE tools themselves.
     * Finally, use `ls -ltr` again to list all files in `libs.tech`.
 
+# Commands to invoke OpenLANE Commands 
+
+![image](https://github.com/user-attachments/assets/df3b4e8b-ea42-4035-98d3-1151759030cf)
+
+
 
 
 
