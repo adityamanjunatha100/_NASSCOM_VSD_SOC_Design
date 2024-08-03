@@ -245,6 +245,31 @@ Viewing Library Files:
 
 ![image](https://github.com/user-attachments/assets/df3b4e8b-ea42-4035-98d3-1151759030cf)
 
+## Launching OpenLANE
+
+
+
+To start OpenLANE, follow these steps:
+
+1. **Navigate to the Tools Directory:**
+   * Open your terminal and type `cd Desktop/work/tools` to access the tools folder.
+
+2. **Access the OpenLANE Project:**
+   * Move into the specific OpenLANE project directory by typing `cd openlane_working_dir`.
+
+3. **Enter the OpenLANE Directory:**
+   * Change to the main OpenLANE directory using `cd openlane`.
+
+4. **Start the Docker Container:**
+   * Initiate the Docker container by typing `docker`. This sets up the necessary environment for OpenLANE.
+
+5. **Verify OpenLANE Files:**
+   * Use `ls -ltr` to list the contents of the OpenLANE directory and verify that all required files are present.
+
+6. **Run the OpenLANE Flow:**
+   * Execute the OpenLANE flow in interactive mode with the command `./flow.tcl -interactive`. This starts the design process and allows you to interact with the tool. 
+
+
 
 
 
