@@ -270,8 +270,9 @@ To start OpenLANE, follow these steps:
    * Execute the OpenLANE flow in interactive mode with the command `./flow.tcl -interactive`. This starts the design process and allows you to interact with the tool. 
 
 
+# Steps to prepare for openlane cd designs
 
-
+![image](https://github.com/user-attachments/assets/892908a4-2438-4ac1-981e-2264f1bd0c5b)
 
 
 
