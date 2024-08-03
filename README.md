@@ -230,6 +230,19 @@ Check Tool-Specific Library Files:
 
 ![image](https://github.com/user-attachments/assets/f637e0cd-7b58-4d8c-b253-940bb4ba2474)
 
+Viewing Library Files:
+
+1. Process-Specific Files (libs.ref):
+    * Use `cd libs.ref` to access the directory containing reference library files specific to the chosen chip fabrication process.
+    * Run `ls -ltr` to list all files within `libs.ref`, sorted by date with the newest at the top.
+
+2. Tool-Specific Files (libs.tech):
+    * Navigate back one directory level using `cd ..`.
+    * Enter `cd libs.tech` to move to the directory containing files specific to the OpenLANE tools themselves.
+    * Finally, use `ls -ltr` again to list all files in `libs.tech`.
+
+
+
 
 
 
