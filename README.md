@@ -198,7 +198,10 @@ OpenLANE leverages a collection of open-source Electronic Design Automation (EDA
 
 Navigating Your Design Workflow:
 
-Here's a step-by-step guide using Linux commands to navigate your OpenLANE project:
+![image](https://github.com/user-attachments/assets/8ccf7f40-3214-404f-8576-3e988fd7b24b)
+
+
+Here's a step-by-step guide using Linux commands to navigate  OpenLANE project:
 
 Locate Your Tools:
 
