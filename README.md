@@ -73,10 +73,12 @@ Google Skywater PDK: A prominent open-source PDK for a 130nm process, enabling t
 
 This is the starting point, where the design is captured in a hardware description language like Verilog or VHDL.
 It represents the high-level behavior of the circuit, defining how data is transferred between registers.
+
 2. PDK (Process Design Kit):
 
 Contains detailed information about the manufacturing process, including transistor models, design rules, and library cells.
 Essential for ensuring the design is compatible with the chosen fabrication technology.
+
 3. GDSII:
 
 The final output, a file format containing the geometric data used to manufacture the integrated circuit (IC).
@@ -162,15 +164,15 @@ The power distribution network is designed to ensure efficient power delivery an
 
 The clock distribution network is generated to deliver clock signals to all flip-flops with minimal skew and jitter. This is crucial for timing closure.
 
-6)Optimization:
+6) Optimization:
 
 Various optimization techniques are applied to improve design characteristics such as area, power, and performance.
 
-7)Detailed Routing:
+7) Detailed Routing:
 
 The physical connections between logic gates and other components are established using metal wires within the chip layers. Routing algorithms aim to minimize wire length, congestion, and signal integrity.
 
-8)Static Timing Analysis (STA):
+8) Static Timing Analysis (STA):
 
 The timing performance of the design is analyzed to ensure it meets the specified timing constraints. OpenSTA is used for this purpose.
 
