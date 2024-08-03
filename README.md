@@ -305,6 +305,49 @@ The provided commands outline the initial steps for setting up an OpenLANE desig
 
 9. **Clearing the Screen:**
    * `clear`: Clears the terminal screen.
+  
+
+## Reviewing Design Results and Exploring Files
+
+![image](https://github.com/user-attachments/assets/44a12b7b-5ba1-4c12-8385-9ef1ccb5f1e4)
+
+
+The provided commands focus on navigating through the results of a design run and examining specific files.
+
+1. **Accessing Design Runs:**
+   * `cd runs`: This command takes you to the directory containing various design runs.
+
+2. **Selecting a Specific Run:**
+   * `ls -ltr`: Lists the available design runs in chronological order.
+   * `cd 12_08_10_49`: This command enters the directory for the run that occurred on August 12, 2010, at 4:49 PM.
+
+3. **Examining Temporary Files:**
+   * `ls -ltr`: Lists the files within the specified run directory.
+   * `cd temp`: Navigates to the temporary files directory, likely containing intermediate results.
+   * `less merged.lef`: Opens the `merged.lef` file using the `less` command to view its contents. This file often combines layout information from different sources.
+
+## Analyzing Synthesis Results
+
+1. **Navigating to the Results Directory:**
+   * `cd results`: Moves to the directory containing the overall results of the design project.
+
+2. **Accessing the Synthesis Results:**
+   * `ls -ltr`: Lists the contents of the `results` directory, showing different design stages.
+   * `cd synthesis`: Enters the directory specifically for synthesis results.
+
+3. **Examining the Synthesis Report:**
+   * `ls -ltr`: Lists the files within the `synthesis` directory.
+   * `less picorv32a.synthesis.v`: Opens the `picorv32a.synthesis.v` file in a pager (less) to view the synthesized Verilog code.
+
+4. **Returning to the Parent Directory:**
+   * `cd ../ cd../`: Navigates back two levels to the main project directory.
+
+5. **Exploring Reports:**
+   * `cd reports`: Moves to the directory containing various reports generated during the design process.
+
+6. **Checking Synthesis Reports:**
+   * `ls -ltr`: Lists the files within the `reports` directory.
+   * `cd synthesis`: Enters the directory containing synthesis-related reports.
 
 
 
