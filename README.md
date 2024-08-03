@@ -41,6 +41,151 @@ The image provides a snapshot of the RISC-V development process. On the left, a 
 The image illustrates the design flow from high-level software instructions to physical hardware implementation in a RISC-V processor.
 Starting with assembly code representing an "add" instruction, the assembler converts it into machine code. This machine code, representing the Instruction Set Architecture (ISA), serves as an abstract interface to the hardware. The RTL (Register Transfer Level) code, written in a hardware description language, defines the logic for processing these instructions. This RTL is then synthesized into a netlist, a detailed description of the circuit's components and connections. Finally, the physical design implementation translates the netlist into a layout of transistors and wires on a silicon chip, creating the actual hardware capable of executing the original "add" instruction. 
 
+#  SoC design and OpenLANE
+
+Introduction to all components of open-source digital asic design
+
+
+<img width="1411" alt="Screenshot 2024-08-03 at 12 11 42 PM" src="https://github.com/user-attachments/assets/aca4a2b1-0974-4a30-b7ff-d4018d504f54">
+
+1. EDA Tools:
+
+qflow: This is the overall flow manager orchestrating the entire design process. It handles task scheduling, resource allocation, and data management.
+OpenROAD: A comprehensive tool suite covering various design stages, including synthesis, placement, and routing. It optimizes the chip layout for performance and power efficiency.
+OpenLANE: A complete flow for digital ASIC implementation, encompassing tasks like synthesis, physical design, and sign-off. It provides a streamlined approach to the design process.
+
+2. RTL Designs:
+
+These are the initial designs written in hardware description languages like Verilog or VHDL. They capture the chip's functionality at a high level.
+librecores.org, opencores.org, and github.com: These platforms offer a rich repository of open-source RTL designs for various components, accelerating the design process.
+
+3. PDK Data:
+
+Process Design Kit (PDK): This essential data package provides detailed information about the manufacturing process, including transistor models, design rules, and library cells.
+Google Skywater PDK: A prominent open-source PDK for a 130nm process, enabling the fabrication of chips through Skywater Technology Foundry.
+
+
+# Simplified RTL2GDS flow
+
+<img width="1407" alt="Screenshot 2024-08-03 at 12 12 07 PM" src="https://github.com/user-attachments/assets/ef8f56a6-e030-4ddf-aaa0-ba7a9aa9dd3b">
+
+1. RTL (Register Transfer Level):
+
+This is the starting point, where the design is captured in a hardware description language like Verilog or VHDL.
+It represents the high-level behavior of the circuit, defining how data is transferred between registers.
+2. PDK (Process Design Kit):
+
+Contains detailed information about the manufacturing process, including transistor models, design rules, and library cells.
+Essential for ensuring the design is compatible with the chosen fabrication technology.
+3. GDSII:
+
+The final output, a file format containing the geometric data used to manufacture the integrated circuit (IC).
+Flow Stages:
+
+Synthesis:
+
+Translates the RTL design into a gate-level netlist, representing the circuit using logic gates.
+Optimization tools are used to minimize area, power consumption, and delay.
+Floorplanning (FP) and Power Planning (PP):
+
+Determines the overall chip layout, including the placement of major functional blocks and power distribution networks.
+Ensures efficient power delivery and ground connections.
+Placement:
+
+Assigns physical locations to individual logic gates and standard cells within the chip area.
+Optimization algorithms aim to minimize wire length and delay.
+Clock Tree Synthesis (CTS):
+
+Designs the clock distribution network, ensuring that all clock signals arrive at flip-flops with minimal skew and jitter.
+Critical for timing closure and circuit performance.
+Routing:
+
+Connects the logic gates and other components using metal wires within the chip layers.
+Routing algorithms optimize wire length, congestion, and signal integrity.
+Sign-Off:
+
+Verifies that the final design meets all design constraints and requirements.
+Includes static timing analysis (STA), power analysis, and layout verification.
+
+# Introduction to OpenLANE and Strive chipsets
+
+<img width="1406" alt="Screenshot 2024-08-03 at 12 12 51 PM" src="https://github.com/user-attachments/assets/17a8ae36-b90f-4740-b6fb-96afcf0cf1ac">
+
+Main Goal
+
+The primary objective of the OpenLANE flow is to automate the entire ASIC design process from RTL to GDSII without requiring human intervention. This is a significant step towards achieving a fully autonomous design flow.
+
+Definition of a "Clean" GDSII
+
+A "clean" GDSII, as defined in the image, adheres to the following criteria:
+
+No LVS Violations: Logical and physical representations of the design must match perfectly.
+No DRC Violations: The design must comply with all design rules specified by the fabrication process.
+Timing Violations: Currently under development (WIP). Achieving timing closure without manual intervention is a challenging but crucial goal.
+Significance of OpenLANE
+
+By striving for a completely automated flow with a clean GDSII output, OpenLANE aims to streamline the ASIC design process, reduce time-to-market, and minimize design errors. This aligns with the broader industry trend towards increased design automation and reduced reliance on human expertise.
+
+In essence, the image highlights OpenLANE's ambition to become a fully autonomous ASIC design platform capable of producing high-quality, manufacturable designs without human intervention.
+
+
+# Introduction to OpenLANE ASIC flow
+
+<img width="1405" alt="Screenshot 2024-08-03 at 12 13 45 PM" src="https://github.com/user-attachments/assets/8b705ab2-4c9f-45a1-bf3e-670306a94d4c">
+
+OpenLANE ASIC flow is a comprehensive, open-source framework designed to automate the entire process of creating an integrated circuit (IC) from Register Transfer Level (RTL) code to a manufacturable GDSII file. It encompasses a wide range of design stages, from synthesis and floorplanning to physical verification.
+
+Key Components and Stages
+
+1) Design Input:
+
+RTL: The initial design is captured in RTL code, typically using Verilog or VHDL. This code describes the circuit's functionality at a high level.
+PDK (Process Design Kit): Provides detailed information about the manufacturing process, including transistor models, design rules, and standard cell libraries. It ensures compatibility between the design and the fabrication technology.
+
+2) Synthesis:
+
+RTL Synthesis: The RTL code is translated into a gate-level netlist using tools like Yosys and ABC. This netlist represents the circuit using logic gates.
+Synthesis Exploration: Multiple synthesis options are explored to find the best trade-offs between area, power, and performance.
+
+3) Floorplanning:
+
+OpenROAD App: This tool is used for initial chip layout planning. It determines the placement of major functional blocks and power distribution networks.
+Placement:
+
+The logic gates and standard cells are assigned specific physical locations within the chip area. Optimization algorithms are employed to minimize wire length and delay.
+
+4) Power Planning:
+
+The power distribution network is designed to ensure efficient power delivery and ground connections throughout the chip.
+
+5) Clock Tree Synthesis (CTS):
+
+The clock distribution network is generated to deliver clock signals to all flip-flops with minimal skew and jitter. This is crucial for timing closure.
+
+6)Optimization:
+
+Various optimization techniques are applied to improve design characteristics such as area, power, and performance.
+
+7)Detailed Routing:
+
+The physical connections between logic gates and other components are established using metal wires within the chip layers. Routing algorithms aim to minimize wire length, congestion, and signal integrity.
+
+8)Static Timing Analysis (STA):
+
+The timing performance of the design is analyzed to ensure it meets the specified timing constraints. OpenSTA is used for this purpose.
+
+9) Physical Verification:
+
+The design is checked for errors such as layout versus schematic (LVS) mismatches and design rule checks (DRC) violations. Tools like Magic and Netgen are employed.
+
+10) Design for Testability (DFT):
+
+Structures are added to the design to enable testing and fault diagnosis.
+
+11) GDSII Output:
+
+The final design is converted into a GDSII file, which is the standard format for manufacturing data.
+
 
 
 
