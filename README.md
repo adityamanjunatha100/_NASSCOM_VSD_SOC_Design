@@ -25,6 +25,22 @@ Chip Layout
 The image illustrates a top-down view of a chip's architecture.
 
 Core: At the center lies the RISC-V SoC (System on Chip), the chip's core processing unit.
+
 Peripherals: Surrounding the core are various functional blocks, including a GPIO bank for general input/output, SRAM for fast data storage, and an unspecified block labeled "comp_inn."
+
 Pads: The chip's outer perimeter is lined with pads, the physical connection points for power supply (VDD), ground (VSS), clock signals (CLK), and data transfer (e.g., flash_io, ser_tx, ser_rx).
+
 Foundry IP's and Macros: While not visually distinct in this image, the chip likely incorporates pre-designed building blocks from the foundry and custom-designed macros to enhance its functionality.
+
+# Introduction to RISC V
+<img width="1459" alt="Screenshot 2024-08-03 at 11 05 42 AM" src="https://github.com/user-attachments/assets/ed8c3d00-53db-4062-9b08-e20bef811971">
+
+The image provides a snapshot of the RISC-V development process. On the left, a code editor displays C code implementing a "swap" function, which will be compiled into machine code. The middle section shows the assembly code generated for the "swap" function, revealing the RISC-V instructions used. On the right, a block diagram outlines the architecture of a potential RISC-V implementation, the "picorv32" core, detailing its components and control logic. The image underscores the relationship between high-level code, assembly language, and the underlying hardware architecture in the context of RISC-V. 
+
+<img width="1458" alt="Screenshot 2024-08-03 at 11 18 30 AM" src="https://github.com/user-attachments/assets/3d986af3-f230-4935-b941-1e3a9d6d2dfd">
+The image illustrates the design flow from high-level software instructions to physical hardware implementation in a RISC-V processor.
+Starting with assembly code representing an "add" instruction, the assembler converts it into machine code. This machine code, representing the Instruction Set Architecture (ISA), serves as an abstract interface to the hardware. The RTL (Register Transfer Level) code, written in a hardware description language, defines the logic for processing these instructions. This RTL is then synthesized into a netlist, a detailed description of the circuit's components and connections. Finally, the physical design implementation translates the netlist into a layout of transistors and wires on a silicon chip, creating the actual hardware capable of executing the original "add" instruction. 
+
+
+
+
