@@ -539,17 +539,14 @@ These commands initiate the placement stage within OpenLANE and then open the ge
    - `&` (ampersand)
    - Adding the ampersand symbol at the end allows the command to run in the background, and you can regain control of the terminal for other tasks.
 
-**In summary, these commands guide you through running a placement phase in OpenLANE and then visualizing the generated placement data within the Magic tool.**
+**In summary, these commands guide you through running a pla![Screenshot 2024-08-04 at 6 43 32 PM](https://github.com/user-attachments/assets/219a6ee8-fdbe-44d7-87c8-4bcb0dad02df)
+cement phase in OpenLANE and then visualizing the generated placement data within the Magic tool.**
 
 # Cell  Design And characterization
 ![Screenshot 2024-08-04 at 6 37 10 PM](https://github.com/user-attachments/assets/82b9eab6-a7f3-42d2-80f7-de1177b8545b)
 ![Screenshot 2024-08-04 at 6 37 56 PM](https://github.com/user-attachments/assets/8ab1a02c-1aab-445e-b54a-149039b78271)
 
-Cell Design Flow
+![Screenshot 2024-08-04 at 6 43 17 PM](https://github.com/user-attachments/assets/f5ca8205-f3a1-4db3-b3c7-2a1e11908556)
+![Screenshot 2024-08-04 at 6 43 32 PM](https://github.com/user-attachments/assets/11e6867a-6332-4b89-a54f-134db83809bb)
 
-* Define cell functionality: Determine the desired logic function of the cell (e.g., AND gate, D flip-flop).
-* Create cell layout: Design the physical layout of the cell using transistor-level design tools.
-* Perform circuit simulation: Verify the cell's functionality and timing characteristics using circuit simulation tools.
-* Extract parasitics: Determine the parasitic effects (capacitance, resistance) of the cell's layout.
-Characterize cell performance: Measure cell parameters like delay, power consumption, and area.
-Generate cell library: Create a library file containing the cell's characteristics for use in design tools.
+![Screenshot 2024-08-04 at 6 43 52 PM](https://github.com/user-attachments/assets/d6c25686-bd50-42f9-af84-6dc2e37b366a)
