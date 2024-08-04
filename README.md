@@ -352,6 +352,7 @@ Flop Ratio = Number of flops / Number of cells = 1613/14876 = 0.108 = 10.8%
    * `ls -ltr`: Lists the files within the `reports` directory.
    * `cd synthesis`: Enters the directory containing synthesis-related reports.
 
+#
 
 
 
