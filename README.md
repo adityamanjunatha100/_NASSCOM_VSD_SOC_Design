@@ -507,5 +507,6 @@ Optimized Placement with Buffers:
 
 The image showcases a refined version of the placement process where buffers are strategically inserted to enhance performance and signal integrity.
 
+![image](https://github.com/user-attachments/assets/28715996-f9c0-4fe0-8ac7-b20c52cbdccc)
 
 
