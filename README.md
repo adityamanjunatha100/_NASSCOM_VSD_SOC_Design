@@ -581,3 +581,59 @@ Th
 - **Cell Design** involves multiple stages: starting from defining the logic function, selecting the right transistor sizing, and performing schematic capture, to generating the layout and verifying it with respect to the design rules.
 - **Characterization** then ensures that the designed cell meets the required performance metrics under various conditions (like voltage, temperature, etc.). This stage is crucial for ensuring the reliability and efficiency of the cell when integrated into larger designs. 
 
+## Sky130 Day 3 - Design library cell using Magic Layout and ngspice characterization
+![Screenshot 2024-08-04 at 7 50 41 PM](https://github.com/user-attachments/assets/5125a0ae-8528-44a1-97fa-20e7a8860701)
+![Screenshot 2024-08-04 at 7 50 49 PM](https://github.com/user-attachments/assets/f794a7b5-585a-42ca-a540-ac9dbe05fca8)
+![Screenshot 2024-08-04 at 7 50 55 PM](https://github.com/user-attachments/assets/e958c2c4-36d9-47f4-bb29-678543175b65)
+![Screenshot 2024-08-04 at 7 51 00 PM](https://github.com/user-attachments/assets/1f2fe7c6-b5a6-499d-941b-259f6b1bd3ed)
+
+
+
+### Image 1: CMOS Inverter Circuit Schematic and Nodes
+This image shows the CMOS inverter circuit schematics with different configurations at the top and the detailed node labeling at the bottom. The key components are:
+- **M1 and M2**: PMOS and NMOS transistors respectively.
+- **Vdd**: The supply voltage.
+- **Vss**: The ground.
+- **Vin**: The input voltage to the inverter.
+- **Vout**: The output voltage of the inverter.
+- **Cload**: The load capacitance.
+
+The nodes in the circuit are annotated, indicating where various measurements and connections are made.
+
+### Image 2: SPICE Deck Description
+This image shows the SPICE deck for simulating the CMOS inverter. Key sections include:
+
+
+The diagram on the right visualizes the netlist description.
+
+ Image 3: SPICE Waveform Output
+This image shows the SPICE simulation output waveform for the CMOS inverter:
+- **X-axis (in)**: Input voltage (Vin) ranging from 0 to 2.5V.
+- **Y-axis (out)**: Output voltage (Vout).
+- **Curve**: Indicates the inverter's switching behavior, showing how the output voltage changes as the input voltage varies.
+
+The parameters for the transistors are:
+- \( W_n = W_p = 0.375u \)
+- \( L_n = L_p = 0.25u \)
+- \( \frac{W_n}{L_n} = \frac{W_p}{L_p} = 1.5 \)
+
+### Image 4: Comparison of SPICE Waveforms
+This image shows two SPICE waveforms with different device dimensions:
+- **Left waveform**: Same as Image 3.
+- **Right waveform**: Different transistor dimensions.
+  - \( W_n = 0.375u \)
+  - \( W_p = 0.9375u \)
+  - \( L_n = L_p = 0.25u \)
+  - \( \frac{W_n}{L_n} = 1.5 \)
+  - \( \frac{W_p}{L_p} = 3.75 \)
+
+The right waveform shows the impact of the increased width of the PMOS transistor (M1), which affects the switching characteristics and the output voltage behavior.
+
+### Explanation of SPICE Deck Creation
+A SPICE deck is essentially a text file containing:
+1. **Model Descriptions**: Specifies the parameters of the transistors used in the circuit.
+2. **Netlist Description**: Defines the connectivity and components of the circuit.
+3. **Simulation Commands**: Instructions for running the simulation, such as operating points (.op), DC sweep (.dc), and including external models (.include, .LIB).
+
+
+
