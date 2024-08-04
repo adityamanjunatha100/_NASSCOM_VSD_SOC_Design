@@ -479,3 +479,7 @@ While the image provides a basic overview, here are some general pin placement p
 * **Core Placement:** The core is usually located in the center of the die to optimize wire length and signal integrity.
 * **Contact Placement:** Contacts are distributed throughout the die to connect metal layers to the underlying transistor levels.
 
+
+![image](https://github.com/user-attachments/assets/252723b3-2e55-4473-9bc6-8cb649618694)
+
+
