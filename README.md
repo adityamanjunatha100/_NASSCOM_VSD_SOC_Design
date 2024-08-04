@@ -576,11 +576,6 @@ Th
   - The PMOS and NMOS networks are represented as graphs. These help in determining the possible Euler paths that simplify the layout.
   - The sequence "A-C-E-F-D-B" represents the Euler path chosen for the NMOS network to minimize the layout complexity.
 
-### Image : Physical Layout 
-- **Layout Implementation:**
-  - The image displays a more detailed physical layout of the circuit. This shows the actual placement of transistors, vias, and metal layers.
-  - **Color Coding:** Different colors typically represent various layers of the layout (e.g., polysilicon, metal1, metal2, etc.). The use of multiple metal layers allows for efficient routing and compact design.
-  - The overlaid grid structure suggests the careful planning needed to ensure compliance with DRC rules and to optimize the performance of the cell.
 
 ### Cell Design and Characterization 
 - **Cell Design** involves multiple stages: starting from defining the logic function, selecting the right transistor sizing, and performing schematic capture, to generating the layout and verifying it with respect to the design rules.
