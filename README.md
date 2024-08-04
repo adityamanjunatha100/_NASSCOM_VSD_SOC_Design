@@ -509,4 +509,47 @@ The image showcases a refined version of the placement process where buffers are
 
 ![image](https://github.com/user-attachments/assets/28715996-f9c0-4fe0-8ac7-b20c52cbdccc)
 
+Here's a rephrased version of the commands in a more user-friendly format:
 
+**Running Placement and Viewing the Results in Magic:**
+
+These commands initiate the placement stage within OpenLANE and then open the generated placement information in the Magic tool for visualization.
+
+**Step 1: Running Placement ( script called `run_placement`):**
+
+- This part (not explicitly shown) executes the placement process to determine the layout of different blocks within the chip design.
+
+**Step 2: Viewing the Placement Results in Magic:**
+
+1. **Navigate to the Results Directory:**
+   - `cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/30-07_09-24/results/placement/`
+   - This command changes your directory to the specific "placement" subfolder within the results directory of a previous OpenLANE run for the "picorv32a" project.
+
+2. **Launch Magic with Configuration:**
+   - `magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech`
+   - This command starts the Magic tool, specifying the configuration file `sky130A.tech` located within the OpenLANE PDK (Process Design Kit) directory. This file provides information about the technology used to manufacture the chip.
+
+3. **Read Layout and Placement Files:**
+   - `lef read ../../tmp/merged.lef`
+   - This command instructs Magic to read the design layout information from the `merged.lef` file located two directories above the current location. This file likely combines layout details from various sources.
+   - `def read picorv32a.placement.def`
+   - This command instructs Magic to read the placement information from the `picorv32a.placement.def` file. This file defines the positions and arrangements of different blocks within the chip design (the floorplan).
+
+4. **Run Magic in the Background (Optional):**
+   - `&` (ampersand)
+   - Adding the ampersand symbol at the end allows the command to run in the background, and you can regain control of the terminal for other tasks.
+
+**In summary, these commands guide you through running a placement phase in OpenLANE and then visualizing the generated placement data within the Magic tool.**
+
+# Cell  Design And characterization
+![Screenshot 2024-08-04 at 6 37 10 PM](https://github.com/user-attachments/assets/82b9eab6-a7f3-42d2-80f7-de1177b8545b)
+![Screenshot 2024-08-04 at 6 37 56 PM](https://github.com/user-attachments/assets/8ab1a02c-1aab-445e-b54a-149039b78271)
+
+Cell Design Flow
+
+* Define cell functionality: Determine the desired logic function of the cell (e.g., AND gate, D flip-flop).
+* Create cell layout: Design the physical layout of the cell using transistor-level design tools.
+* Perform circuit simulation: Verify the cell's functionality and timing characteristics using circuit simulation tools.
+* Extract parasitics: Determine the parasitic effects (capacitance, resistance) of the cell's layout.
+Characterize cell performance: Measure cell parameters like delay, power consumption, and area.
+Generate cell library: Create a library file containing the cell's characteristics for use in design tools.
