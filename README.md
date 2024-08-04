@@ -352,7 +352,46 @@ Flop Ratio = Number of flops / Number of cells = 1613/14876 = 0.108 = 10.8%
    * `ls -ltr`: Lists the files within the `reports` directory.
    * `cd synthesis`: Enters the directory containing synthesis-related reports.
 
-#
+## Day 2 - Good floorplan vs bad floorplan and introduction to library cells
+1
+# Chip Floor planning considerations
+
+
+![Screenshot 2024-08-04 at 12 54 59 PM](https://github.com/user-attachments/assets/60644ad7-eefa-4463-9008-9bb1f44f7521)
+
+
+![Screenshot 2024-08-04 at 12 55 30 PM](https://github.com/user-attachments/assets/3b441d63-aa17-4b61-adf3-7c6eca6d7332)
+
+## Defining Width and Height of Core and Die
+
+## Understanding the Image: Core, Die, and Utilization Factor
+
+### Core and Die Dimensions
+
+The image provides a simplified representation of a chip layout, illustrating the concepts of core and die.
+
+* **Die:** Represents the entire chip area, including the core and other components like I/O pads, power/ground networks, and clock distribution. In the image, the die is a rectangle with dimensions of 4 units (width) by 2 units (height).
+
+* **Core:** Represents the active area of the chip where the primary logic circuitry resides. It's typically a rectangular area within the die. In the image, the core is also a rectangle with dimensions of 2 units (width) by 2 units (height).
+
+### Utilization Factor
+
+
+```
+Utilization Factor = Core Area / Die Area
+```
+
+In this case, the core area is 2 units * 2 units = 4 square units, and the die area is 4 units * 2 units = 8 square units. Therefore, the utilization factor is 4 / 8 = 0.5. This means that only 50% of the die area is used for the core, while the remaining 50% is occupied by other components.
+
+### Aspect Ratio
+
+
+
+```
+Aspect Ratio = Height / Width
+```
+
+For both the core and the die in this example, the aspect ratio is 2 units / 4 units = 0.5.
 
 
 
