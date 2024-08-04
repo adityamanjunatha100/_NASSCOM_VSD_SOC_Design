@@ -634,5 +634,14 @@ A SPICE deck is essentially a text file containing:
 2. **Netlist Description**: Defines the connectivity and components of the circuit.
 3. **Simulation Commands**: Instructions for running the simulation, such as operating points (.op), DC sweep (.dc), and including external models (.include, .LIB).
 
+![image](https://github.com/user-attachments/assets/4d8b13fb-7623-4060-ade6-5635c60eedc0)
+
+![image](https://github.com/user-attachments/assets/b9d7dbf8-50df-4c19-b483-e29ce26da013)
+
+![image](https://github.com/user-attachments/assets/87a993f8-2569-4830-8d51-013a8a1c972e)
+
+![image](https://github.com/user-attachments/assets/3098412e-ba70-48a2-9a2c-32e1baf742cc)
+
+![image](https://github.com/user-attachments/assets/432aa9c1-58d9-4309-bbf3-50d7589e318c)
 
 
