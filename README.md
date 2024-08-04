@@ -645,3 +645,99 @@ A SPICE deck is essentially a text file containing:
 ![image](https://github.com/user-attachments/assets/432aa9c1-58d9-4309-bbf3-50d7589e318c)
 
 
+**1. Change Directory:**
+
+- `cd Desktop/work/tools/openlane_working_dir/openlane`
+   - This command navigates you to the "openlane" directory within your OpenLANE working directory on your Desktop.
+
+**2. Clone the Repository:**
+
+- `git clone https://github.com/nickson-jose/vsdstdcelldesign.git`
+   - This command uses the `git clone` command to download the contents of the "vsdstdcelldesign" repository from GitHub, created by the user "nickson-jose", into your current directory.
+
+**3. List Directory Contents:**
+
+- `ls -ltr`
+   - This command lists the contents of your current directory in long format, providing details like file permissions, owner, group, size, and last modification time. This helps you confirm the successful cloning of the repository.
+
+**4. Enter the Repository Directory:**
+
+- `cd vsdstdcelldesign`
+   - This command changes your directory to the newly cloned "vsdstdcelldesign" directory.
+
+**5. List Directory Contents (Optional):**
+
+- `ls -ltr`
+   - This command (optional) lists the contents of the "vsdstdcelldesign" directory, showing the files and folders within the custom inverter design.
+ 
+Within the "vsdstdcelldesign" directory, this command sequence first lists the directory contents using `ls -ltr` and then launches the Magic tool (`magic`) with the configuration file `sky130A.tech` and the design file `sky130_inv.magic`. The ampersand symbol (`&`) runs Magic in the background, allowing you to continue using the terminal for other tasks. 
+
+The "16 Mask CMOS Process" refers to a specific fabrication process for creating CMOS (Complementary Metal-Oxide-Semiconductor) integrated circuits, typically using 16 photolithographic masks. Each mask corresponds to a specific step in the manufacturing process, defining different layers and patterns on the semiconductor wafer. Here's a brief overview of the 16 Mask CMOS Process:
+
+### Key Steps in the 16 Mask CMOS Process:
+
+1. **Substrate Preparation**: Start with a clean silicon wafer.
+
+2. **Well Formation**:
+   - **Mask 1**: Define the n-well regions using photolithography.
+   - **Mask 2**: Define the p-well regions.
+
+3. **Threshold Voltage Adjustment**:
+   - **Mask 3**: Adjust the threshold voltage (Vt) for NMOS transistors.
+   - **Mask 4**: Adjust the threshold voltage for PMOS transistors.
+
+4. **Isolation**:
+   - **Mask 5**: Create isolation regions, typically using LOCOS (Local Oxidation of Silicon) or STI (Shallow Trench Isolation).
+
+5. **Gate Oxide Formation**: Grow a thin layer of silicon dioxide on the wafer surface.
+
+6. **Polysilicon Gate Formation**:
+   - **Mask 6**: Deposit and pattern polysilicon to form the gate electrodes for NMOS and PMOS transistors.
+
+7. **Lightly Doped Drain (LDD) Implantation**:
+   - **Mask 7**: LDD implantation for NMOS transistors.
+   - **Mask 8**: LDD implantation for PMOS transistors.
+
+8. **Spacer Formation**: Deposit and etch a spacer layer (typically silicon nitride or silicon dioxide) on the sides of the polysilicon gates.
+
+9. **Source/Drain Implantation**:
+   - **Mask 9**: Source/drain implantation for NMOS transistors.
+   - **Mask 10**: Source/drain implantation for PMOS transistors.
+
+10. **Silicide Formation**:
+    - **Mask 11**: Form silicide contacts on the polysilicon gates and source/drain regions to reduce resistance.
+
+11. **Interlayer Dielectric (ILD) Deposition**: Deposit an insulating layer over the entire wafer.
+
+12. **Contact Formation**:
+    - **Mask 12**: Etch contact holes through the ILD to the silicide regions.
+
+13. **Metal Deposition and Patterning**:
+    - **Mask 13**: Deposit and pattern the first layer of metal interconnects.
+    - **Mask 14**: Deposit and pattern the second layer of metal interconnects.
+
+14. **Passivation Layer**:
+    - **Mask 15**: Deposit a passivation layer to protect the circuit and etch openings for bond pads.
+
+15. **Bond Pad Formation**:
+    - **Mask 16**: Define the bond pad openings for external connections.
+
+### Explanation of the Masks:
+
+1. **Mask 1 & 2**: N-well and P-well formation for the PMOS and NMOS transistors.
+2. **Mask 3 & 4**: Threshold voltage adjustment implants.
+3. **Mask 5**: Isolation regions to separate different transistors.
+4. **Mask 6**: Gate polysilicon patterning for the transistor gates.
+5. **Mask 7 & 8**: Lightly doped drain implants to reduce hot carrier effects.
+6. **Mask 9 & 10**: Source/drain implants for NMOS and PMOS transistors.
+7. **Mask 11**: Silicide formation to improve conductivity.
+8. **Mask 12**: Contact holes for electrical connections.
+9. **Mask 13 & 14**: Metal interconnect layers for wiring the circuit.
+10. **Mask 15**: Passivation layer to protect the circuit.
+11. **Mask 16**: Bond pad openings for connecting the chip to external circuits.
+
+# Lab introduction to Sky130 basic layers layout and LEF using inverter
+
+
+
+
