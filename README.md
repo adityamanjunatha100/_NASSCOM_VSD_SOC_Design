@@ -393,11 +393,89 @@ Aspect Ratio = Height / Width
 
 For both the core and the die in this example, the aspect ratio is 2 units / 4 units = 0.5.
 
+# Define the location of pre placed cell
+
+![Screenshot 2024-08-04 at 12 55 57 PM](https://github.com/user-attachments/assets/84d90303-6fba-4b35-9e60-0d78da6e3dee)
+
+![Screenshot 2024-08-04 at 12 56 12 PM](https://github.com/user-attachments/assets/e2b1892e-6e2a-4d49-820b-df2a196b1c8d)
+
+## Understanding Pre-Placed Cells 
+
+**Pre-placed cells** are essentially pre-defined blocks or modules that are strategically positioned within a chip's layout before the automated placement and routing process begins. These cells often represent complex logic functions or IP cores that have already been designed and verified.
+
+
+1. **Identification of Blocks:**
+   * The diagram initially shows two blocks labeled "Block 1" and "Block 2," each containing multiple logic gates (represented by symbols like A1, A2, etc.).
+
+2. **Black Boxing:**
+   * The process of "black boxing" involves treating these blocks as single entities without considering their internal logic. This is akin to representing the blocks as pre-placed cells.
+
+3. **Separation into IPs or Modules:**
+   * The image further suggests that these black boxes can be considered as separate Intellectual Property (IP) cores or modules. This implies that they are reusable components that can be integrated into different designs.
+
+4. **Pre-placed Cell Placement:**
+   * The final part of the image shows the placement of these blocks (now represented as IP cores or modules) within a chip's layout. This is the concept of pre-placement. The remaining empty space in the chip would be filled with other logic cells during the automated placement and routing process.
+
+# Decoupling capacitors
+![Screenshot 2024-08-04 at 12 56 43 PM](https://github.com/user-attachments/assets/eb65158d-b070-4b1d-bc33-baedf231447c)
+
+
+**Key Components and Functions:**
+
+- **Power Supply (Vdd):** Represents the main power source for the circuit.
+- **Decoupling Capacitors (Cd):** These are small capacitors placed in parallel with the power supply lines near the digital ICs. Their primary function is to provide a local reservoir of charge to quickly supply current during sudden changes in circuit operation.
+- **Resistors (R1, R2):** Model the internal resistance of the power supply and the wiring connecting it to the circuit.
+- **Inductors (L1, L2):** Represent the inductance of the power supply lines and wiring.
+
+**How Decoupling Capacitors Work:**
+
+1. **Current Spikes:** When digital circuits switch states, they draw sudden bursts of current from the power supply.
+2. **Capacitor Discharge:** The decoupling capacitor (Cd) discharges quickly to meet this immediate current demand, preventing voltage drops on the power supply line.
+3. **Power Supply Replenishment:** The power supply (Vdd) and the RL network (consisting of resistors and inductors) work together to replenish the charge in the decoupling capacitor over time.
+
+**Benefits of Using Decoupling Capacitors:**
+
+- **Reduced Noise and Interference:** By minimizing voltage fluctuations, decoupling capacitors help reduce electromagnetic interference (EMI) and improve signal integrity.
+- **Improved Circuit Performance:** Faster switching speeds and reduced power consumption can be achieved with proper decoupling.
+- **Increased Circuit Reliability:** Decoupling capacitors can help prevent circuit malfunctions caused by power supply noise.
+
+**Placement and Selection:**
+
+- Decoupling capacitors should be placed as close as possible to the power and ground pins of the ICs to minimize the length of the power supply traces.
+- The value of the decoupling capacitor depends on the switching speed and current requirements of the circuit.
+
+# Power planning
+
+
+![Screenshot 2024-08-04 at 12 57 10 PM](https://github.com/user-attachments/assets/9f4aa0bf-1330-4fd6-bbce-f4457c43bba9)
 
 
 
+![Screenshot 2024-08-04 at 12 57 18 PM](https://github.com/user-attachments/assets/61c779d1-649e-453f-ae2a-333ac15babfc)
 
 
 
+The Role of PDN
 
+A robust Power Distribution Network (PDN) is essential to address these challenges. Its primary functions include:
+
+1) Delivering Power Efficiently: Ensuring that all parts of the chip receive the necessary power to operate correctly.
+2) Minimizing Power Noise: Reducing fluctuations in the power supply voltage caused by current variations, which can disrupt circuit operation.
+3) Controlling Voltage Drops (IR Drop): Minimizing the voltage drop across the power distribution network to prevent performance degradation and functional failures.
+
+# Pin Placement 
+
+![Screenshot 2024-08-04 at 1 01 43 PM](https://github.com/user-attachments/assets/04eca8a2-2213-4443-890e-7bdccbaee493)
+
+
+
+**Pin Placement Principles:**
+
+While the image provides a basic overview, here are some general pin placement principles:
+
+* **I/O Placement:** Input/output pins (Din, Dout, CLK) are typically placed along the die's periphery to facilitate connections with external devices.
+* **Power and Ground:** Vdd and Vss lines are often placed along the die edges to provide easy access and reduce noise coupling.
+* **Decoupling Capacitor Placement:** Decoupling capacitors are strategically placed near the power supply pins of logic blocks to filter out high-frequency noise.
+* **Core Placement:** The core is usually located in the center of the die to optimize wire length and signal integrity.
+* **Contact Placement:** Contacts are distributed throughout the die to connect metal layers to the underlying transistor levels.
 
