@@ -550,3 +550,39 @@ cement phase in OpenLANE and then visualizing the generated placement data withi
 ![Screenshot 2024-08-04 at 6 43 32 PM](https://github.com/user-attachments/assets/11e6867a-6332-4b89-a54f-134db83809bb)
 
 ![Screenshot 2024-08-04 at 6 43 52 PM](https://github.com/user-attachments/assets/d6c25686-bd50-42f9-af84-6dc2e37b366a)
+
+Th
+
+### Image : Cell Design Flow Overview
+- **Inputs:**
+  - **Process Design Kits (PDKs):** These include essential components like Design Rule Check (DRC) and Layout Versus Schematic (LVS) rules, SPICE models, and standard libraries. These kits help in setting the constraints and specifications for the design.
+  - **User-Defined Specifications:** This includes the specific requirements that the designer inputs based on the target application.
+  
+- **Design Steps:**
+  - **Circuit Design:** This involves creating the circuit schematic based on the desired logic function.
+  - **Layout Design:** Translating the circuit design into a physical layout that can be fabricated. This process involves placing and routing the components according to the design rules.
+  - **Characterization:** The process of analyzing the performance of the cell, including its timing, power consumption, and other key parameters.
+  
+- **Outputs:**
+  - **CDL (Circuit Description Language):** A representation of the circuit that can be used for verification and as input for further design processes.
+
+### Image : Euler's Path and Stick Diagram
+- **Art of Layout:**
+  - The left side of the image seems to show a logic circuit with multiple transistors. The transistors are grouped into PMOS and NMOS networks.
+  - **Euler’s Path:** Euler's path is a method used in the layout design where the goal is to minimize the number of crossings in the layout. This simplifies the routing and reduces the area used.
+  - The **stick diagram** represents the layout at a higher level, abstracting the physical details but showing the connectivity.
+  
+- **Network Graphs:**
+  - The PMOS and NMOS networks are represented as graphs. These help in determining the possible Euler paths that simplify the layout.
+  - The sequence "A-C-E-F-D-B" represents the Euler path chosen for the NMOS network to minimize the layout complexity.
+
+### Image : Physical Layout 
+- **Layout Implementation:**
+  - The image displays a more detailed physical layout of the circuit. This shows the actual placement of transistors, vias, and metal layers.
+  - **Color Coding:** Different colors typically represent various layers of the layout (e.g., polysilicon, metal1, metal2, etc.). The use of multiple metal layers allows for efficient routing and compact design.
+  - The overlaid grid structure suggests the careful planning needed to ensure compliance with DRC rules and to optimize the performance of the cell.
+
+### Cell Design and Characterization 
+- **Cell Design** involves multiple stages: starting from defining the logic function, selecting the right transistor sizing, and performing schematic capture, to generating the layout and verifying it with respect to the design rules.
+- **Characterization** then ensures that the designed cell meets the required performance metrics under various conditions (like voltage, temperature, etc.). This stage is crucial for ensuring the reliability and efficiency of the cell when integrated into larger designs. 
+
