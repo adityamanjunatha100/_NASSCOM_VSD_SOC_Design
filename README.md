@@ -615,7 +615,7 @@ This image shows the SPICE simulation output waveform for the CMOS inverter:
 The parameters for the transistors are:
 - \( W_n = W_p = 0.375u \)
 - \( L_n = L_p = 0.25u \)
-- \( \frac{W_n}{L_n} = \frac{W_p}{L_p} = 1.5 \)
+
 
 ### Image 4: Comparison of SPICE Waveforms
 This image shows two SPICE waveforms with different device dimensions:
@@ -624,8 +624,7 @@ This image shows two SPICE waveforms with different device dimensions:
   - \( W_n = 0.375u \)
   - \( W_p = 0.9375u \)
   - \( L_n = L_p = 0.25u \)
-  - \( \frac{W_n}{L_n} = 1.5 \)
-  - \( \frac{W_p}{L_p} = 3.75 \)
+  
 
 The right waveform shows the impact of the increased width of the PMOS transistor (M1), which affects the switching characteristics and the output voltage behavior.
 
