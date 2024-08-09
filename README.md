@@ -738,7 +738,34 @@ The "16 Mask CMOS Process" refers to a specific fabrication process for creating
 
 # Lab introduction to Sky130 basic layers layout and LEF using inverter
 
+<img width="815" alt="Screenshot 2024-08-09 at 9 37 20 AM" src="https://github.com/user-attachments/assets/77a5198b-62a6-4d7c-8123-821b75e9d4c8">
 
+<img width="825" alt="Screenshot 2024-08-09 at 9 37 42 AM" src="https://github.com/user-attachments/assets/20741c07-4610-40b9-9c75-abc6f1ae79c6">
 
+<img width="825" alt="Screenshot 2024-08-09 at 9 37 54 AM" src="https://github.com/user-attachments/assets/7d4e17ef-88ad-457e-8252-4c176e9a37cf">
 
+<img width="826" alt="Screenshot 2024-08-09 at 9 38 09 AM" src="https://github.com/user-attachments/assets/0f05a4ca-38ad-497f-95bf-3add724ae06f">
 
+<img width="825" alt="Screenshot 2024-08-09 at 9 38 23 AM" src="https://github.com/user-attachments/assets/84be0cab-2f29-41b4-b971-e12c1d5d8fbf">
+
+<img width="827" alt="Screenshot 2024-08-09 at 9 38 42 AM" src="https://github.com/user-attachments/assets/cf25cc22-2731-4919-acbb-1770964d1be2">
+<img width="829" alt="Screenshot 2024-08-09 at 9 38 51 AM" src="https://github.com/user-attachments/assets/7c8e1fff-8e81-4e36-9311-b0737292a0ae">
+<img width="829" alt="Screenshot 2024-08-09 at 9 39 01 AM" src="https://github.com/user-attachments/assets/4c4b3111-346e-4ecc-b3c1-c6cdff4df562">\
+
+<img width="830" alt="Screenshot 2024-08-09 at 9 39 11 AM" src="https://github.com/user-attachments/assets/ea7a35c7-73e6-467d-a31a-a6139eaca0fd">
+<img width="836" alt="Screenshot 2024-08-09 at 9 39 21 AM" src="https://github.com/user-attachments/assets/e27e5d71-1cc6-4a71-87b2-832d46a450bf">
+<img width="822" alt="Screenshot 2024-08-09 at 9 39 29 AM" src="https://github.com/user-attachments/assets/0167f324-475f-46f2-9176-65de9cf2c8ff">
+
+<img width="815" alt="Screenshot 2024-08-09 at 9 40 00 AM" src="https://github.com/user-attachments/assets/97b99b28-03b7-4852-900a-e583c75cef1e">
+<img width="815" alt="Screenshot 2024-08-09 at 9 39 42 AM" src="https://github.com/user-attachments/assets/2c27dde0-11f6-478d-ae28-88ef98a1438a">
+<img width="724" alt="Screenshot 2024-08-09 at 9 40 25 AM" src="https://github.com/user-attachments/assets/e2d2f907-8ace-464a-8588-718a702ce363">
+<img width="788" alt="Screenshot 2024-08-09 at 9 40 31 AM" src="https://github.com/user-attachments/assets/0fb89720-7237-45e9-8398-0b58522d0fb9">
+<img width="800" alt="Screenshot 2024-08-09 at 9 40 39 AM" src="https://github.com/user-attachments/assets/b312bf87-fc3e-4942-81b4-90e16e329fb7">
+<img width="826" alt="Screenshot 2024-08-09 at 9 40 51 AM" src="https://github.com/user-attachments/assets/99670d9c-7a3f-4b34-a313-ae82377c7463">
+<img width="702" alt="Screenshot 2024-08-09 at 9 40 58 AM" src="https://github.com/user-attachments/assets/45a1e54c-004a-464f-9e10-0ace442b7a0a">
+<img width="803" alt="Screenshot 2024-08-09 at 9 41 10 AM" src="https://github.com/user-attachments/assets/839be831-6ef9-42bd-860a-065a455fad94">
+<img width="829" alt="Screenshot 2024-08-09 at 9 41 20 AM" src="https://github.com/user-attachments/assets/e4012694-f231-4d6d-badf-0b976e124cfb">
+<img width="748" alt="Screenshot 2024-08-09 at 9 41 26 AM" src="https://github.com/user-attachments/assets/9134fb23-bf69-4b56-a0f1-728ab38b1512">
+<img width="810" alt="Screenshot 2024-08-09 at 9 41 35 AM" src="https://github.com/user-attachments/assets/0fd1e4ac-0e27-45e6-9a35-07111c75d150">
+<img width="812" alt="Screenshot 2024-08-09 at 9 41 43 AM" src="https://github.com/user-attachments/assets/bccf6dd0-6769-4248-888f-bab6adf17e7d">
+<img width="828" alt="Screenshot 2024-08-09 at 9 41 54 AM" src="https://github.com/user-attachments/assets/0501f864-3342-486a-bd7b-e4bbb89306bc">
